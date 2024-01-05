@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <link rel="stylesheet" href="/styleslogin.css">
 </head>
-<body>
-    <h1>Login</h1>
-    <form action="/user/login" method="post" >
-        
-        <label>email</label>
-        <input type="text" required name="email"/>
-        <label>password</label>
-        <input type="text" required name="password"/>
 
-        <button type="submit">login</button>
-    </form>
-    
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/user/login" method="post">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" required name="email" placeholder="enter your email" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" required name="password" placeholder="password" />
+            </div>
+            <button type="submit" class="submit-btn">login</button>
+        </form>
+        <p>Don't have an account? <a href="/signup">signup</a></p>
+    </div>
+
 </body>
+
 </html>

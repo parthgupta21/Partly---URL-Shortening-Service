@@ -16,6 +16,9 @@ const PORT = 8001;
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
+// static folder path
+ app.use(express.static("client"));
+
 connectToMongoDB("mongodb://localhost:27017/test").then(console.log(() => "MongoDB connected"));
 
 app.use(express.json());
